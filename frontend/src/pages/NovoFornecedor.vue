@@ -59,8 +59,10 @@ const router = useRouter()
  async function verifyCreate(){
   try {
     await api.post('/fornecedores/', fornecedor.value)
-    void router.push('/listafornecedores') 
+    void router.push('/')
+    alert('Fornecedor criado com sucesso!')
   } catch (error) {
+    alert('Erro ao criar fornecedor')
     console.error('Erro ao criar fornecedor:', error)
     //  $q.notify 
   }
