@@ -58,7 +58,7 @@ const router = useRouter()
 
  async function verifyCreate(){
   try {
-    await api.post('/fornecedores', fornecedor.value)
+    await api.post('/fornecedores/', fornecedor.value)
     void router.push('/listafornecedores') 
   } catch (error) {
     console.error('Erro ao criar fornecedor:', error)

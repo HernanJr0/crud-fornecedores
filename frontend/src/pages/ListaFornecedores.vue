@@ -55,7 +55,7 @@ interface IFornecedor {
 
 const deletarFornecedor = async (id: number) => {
   try {
-    await api.delete(`/fornecedores/${id}`)
+    await api.delete(`/fornecedores/${id}/`)
     
   } catch (err) {
     console.error('Erro ao deletar fornecedor:', err)
